@@ -1,0 +1,81 @@
+.cavani_tm_header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 70px;
+	line-height: 70px;
+	background-color: #fff;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 70px;
+}
+.cavani_tm_header .logo[data-type="image"] .text{
+	display: none;
+}
+.cavani_tm_header .logo[data-type="text"] .text{
+	display: inline-block;
+}
+.cavani_tm_header .logo .text{
+	text-decoration: none;
+	color: #000;
+	text-transform: uppercase;
+	font-family: "Poppins";
+	font-size: 25px;
+	font-weight: 800;
+	letter-spacing: 2px;
+	line-height: 70px;
+	position: relative;
+	top: 2px;
+}
+.cavani_tm_header .menu{
+	position: relative;
+}
+.cavani_tm_header .menu ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.cavani_tm_header .menu ul li{
+	margin: 0px;
+	float: left;
+}
+.cavani_tm_header .menu ul li a{
+	text-decoration: none;
+	color: #333;
+	font-family: "Poppins";
+	font-weight: 500;
+	padding: 0px 30px;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.cavani_tm_header .menu .ccc{
+	position: absolute;
+	width: 30px;
+	display: block;
+	top: 15px;
+	bottom: 15px;
+	background-color: #333;
+	z-index: -1;
+	
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.cavani_tm_header .menu ul li.mleave.active a{
+	color: #333;
+}
+.cavani_tm_header .menu ul li.active a{
+	color: #fff;
+}
+.cavani_tm_header .menu ul li a:hover{
+	color: #fff;
+}
