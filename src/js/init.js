@@ -1,79 +1,69 @@
-import * as jQuery from 'jquery'
-/*
-/*
- * Copyright (c) 2022 Marketify
- * Author: Marketify
- * This file is made for CURRENT TEMPLATE
-*/
-
-jQuery(document).ready(function () {
-
-	"use strict";
-
-	// here all ready functions
-	cavani_tm_modalbox();
-	cavani_tm_page_transition();
-	cavani_tm_trigger_menu();
-	cavani_tm_my_progress();
-	cavani_tm_circular_progress();
-	cavani_tm_portfolio_popup();
-	cavani_tm_news_popup();
-	cavani_tm_service_popup();
-	cavani_tm_cursor();
-	cavani_tm_imgtosvg();
-	cavani_tm_popup();
-	cavani_tm_portfolio();
-	cavani_tm_data_images();
-	cavani_tm_contact_form();
-	cavani_tm_mycarousel();
-	hashtag();
-	cavani_tm_ripple();
-	cavani_tm_moving_box();
-
-	jQuery(window).load('body', function () {
-		cavani_tm_my_load();
-	});
-});
+import $ from "jquery"
 
 // -----------------------------------------------------
 // ---------------   FUNCTIONS    ----------------------
 // -----------------------------------------------------
 
+export function loadAllScripts() {
+	"use strict";
+
+	cavani_tm_modalbox();
+	cavani_tm_page_transition();
+	cavani_tm_trigger_menu();
+	cavani_tm_my_progress();
+	//cavani_tm_circular_progress();
+	cavani_tm_portfolio_popup();
+	cavani_tm_news_popup();
+	cavani_tm_service_popup();
+	cavani_tm_cursor();
+	cavani_tm_imgtosvg();
+	//cavani_tm_popup();
+	cavani_tm_portfolio();
+	cavani_tm_data_images();
+	cavani_tm_contact_form();
+	//cavani_tm_mycarousel();
+	//glitch();
+	hashtag();
+	//cavani_tm_ripple();
+	cavani_tm_moving_box();
+	cavani_tm_my_load();
+}
+
 // -----------------------------------------------------
 // --------------------   MODALBOX    ------------------
 // -----------------------------------------------------
 
-function cavani_tm_modalbox() {
+export function cavani_tm_modalbox() {
 
 	"use strict";
 
-	jQuery('.cavani_tm_all_wrap').prepend('<div class="cavani_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
+	$('.cavani_tm_all_wrap').prepend('<div class="cavani_tm_modalbox"><div class="box_inner"><div class="close"><a href="#"><i class="icon-cancel"></i></a></div><div class="description_wrap"></div></div></div>');
 }
 
 // -----------------------------------------------------
 // -------------   PAGE TRANSITION    ------------------
 // -----------------------------------------------------
 
-function cavani_tm_page_transition() {
+export function cavani_tm_page_transition() {
 
 	"use strict";
 
-	var section = jQuery('.cavani_tm_section');
-	var allLi = jQuery('.transition_link li');
-	var button = jQuery('.transition_link a');
-	var wrapper = jQuery('.cavani_tm_all_wrap');
+	var section = $('.cavani_tm_section');
+	var allLi = $('.transition_link li');
+	var button = $('.transition_link a');
+	var wrapper = $('.cavani_tm_all_wrap');
 	var enter = wrapper.data('enter');
 	var exit = wrapper.data('exit');
 
 	button.on('click', function () {
-		var element = jQuery(this);
+		var element = $(this);
 		var href = element.attr('href');
 		if (element.parent().hasClass('cavani_tm_button')) {
-			jQuery('.menu .transition_link a[href="' + href + '"]').trigger('click');
+			$('.menu .transition_link a[href="' + href + '"]').trigger('click');
 			hashtag();
 			return false;
 		}
-		var sectionID = jQuery(href);
+		var sectionID = $(href);
 		var parent = element.closest('li');
 		if (!parent.hasClass('active')) {
 			allLi.removeClass('active');
@@ -84,8 +74,8 @@ function cavani_tm_page_transition() {
 			parent.addClass('active');
 			wrapper.addClass('opened');
 			wrapper.find(sectionID).removeClass('animated ' + exit).addClass('animated ' + enter);
-			jQuery(section).addClass('hidden');
-			jQuery(sectionID).removeClass('hidden').addClass('active');
+			$(section).addClass('hidden');
+			$(sectionID).removeClass('hidden').addClass('active');
 		}
 		return false;
 	});
@@ -95,16 +85,16 @@ function cavani_tm_page_transition() {
 // ---------------   TRIGGER MENU    -------------------
 // -----------------------------------------------------
 
-function cavani_tm_trigger_menu() {
+export function cavani_tm_trigger_menu() {
 
 	"use strict";
 
-	var hamburger = jQuery('.cavani_tm_topbar .trigger .hamburger');
-	var mobileMenu = jQuery('.cavani_tm_mobile_menu');
-	var mobileMenuList = jQuery('.cavani_tm_mobile_menu ul li a');
+	var hamburger = $('.cavani_tm_topbar .trigger .hamburger');
+	var mobileMenu = $('.cavani_tm_mobile_menu');
+	var mobileMenuList = $('.cavani_tm_mobile_menu ul li a');
 
 	hamburger.on('click', function () {
-		var element = jQuery(this);
+		var element = $(this);
 
 		if (element.hasClass('is-active')) {
 			element.removeClass('is-active');
@@ -117,7 +107,7 @@ function cavani_tm_trigger_menu() {
 	});
 
 	mobileMenuList.on('click', function () {
-		jQuery('.cavani_tm_topbar .trigger .hamburger').removeClass('is-active');
+		$('.cavani_tm_topbar .trigger .hamburger').removeClass('is-active');
 		mobileMenu.removeClass('opened');
 		return false;
 	});
@@ -127,12 +117,12 @@ function cavani_tm_trigger_menu() {
 // -------------  PROGRESS BAR  --------------------
 // -------------------------------------------------
 
-function cavani_tm_my_progress() {
+export function cavani_tm_my_progress() {
 
 	"use strict";
 
-	jQuery('.progress_inner').each(function () {
-		var progress = jQuery(this);
+	$('.progress_inner').each(function () {
+		var progress = $(this);
 		var pValue = parseInt(progress.data('value'), 10);
 		var pColor = progress.data('color');
 		var pBarWrap = progress.find('.bar');
@@ -146,11 +136,11 @@ function cavani_tm_my_progress() {
 // ---------------   CIRCULAR PROGRESS   ---------------
 // -----------------------------------------------------
 
-function cavani_tm_circular_progress() {
+export function cavani_tm_circular_progress() {
 
 	"use strict";
 
-	var ww = jQuery(window).width();
+	var ww = $(window).width();
 	var circVal;
 
 	if (ww > 1400) {
@@ -163,8 +153,8 @@ function cavani_tm_circular_progress() {
 		circVal = 80;
 	}
 
-	jQuery('.circular_progress_bar .myCircle').each(function () {
-		var element = jQuery(this);
+	$('.circular_progress_bar .myCircle').each(function () {
+		var element = $(this);
 		element.append('<span class="number"></span>');
 		var value = element.data('value');
 		element.circleProgress({
@@ -187,16 +177,16 @@ function cavani_tm_circular_progress() {
 // -----------  PORTFOLIO POPUP  -------------------
 // -------------------------------------------------
 
-function cavani_tm_portfolio_popup() {
+export function cavani_tm_portfolio_popup() {
 
 	"use strict";
 
-	var modalBox = jQuery('.cavani_tm_modalbox');
-	var button = jQuery('.cavani_tm_portfolio .portfolio_popup');
+	var modalBox = $('.cavani_tm_modalbox');
+	var button = $('.cavani_tm_portfolio .portfolio_popup');
 	var closePopup = modalBox.find('.close');
 
 	button.off().on('click', function () {
-		var element = jQuery(this);
+		var element = $(this);
 		var parent = element.closest('.list_inner');
 		var content = parent.find('.hidden_content').html();
 		var image = parent.find('.image .main').data('img-url');
@@ -219,16 +209,16 @@ function cavani_tm_portfolio_popup() {
 // ----------------  NEWS POPUP  -------------------
 // -------------------------------------------------
 
-function cavani_tm_news_popup() {
+export function cavani_tm_news_popup() {
 
 	"use strict";
 
-	var modalBox = jQuery('.cavani_tm_modalbox');
-	var button = jQuery('.cavani_tm_news .news_list > ul > li .post_title h3 a');
+	var modalBox = $('.cavani_tm_modalbox');
+	var button = $('.cavani_tm_news .news_list > ul > li .post_title h3 a');
 	var closePopup = modalBox.find('.close');
 
 	button.on('click', function () {
-		var element = jQuery(this);
+		var element = $(this);
 		var parent = element.closest('li');
 		var content = parent.find('.news_hidden_details').html();
 		var image = parent.data('img');
@@ -252,16 +242,16 @@ function cavani_tm_news_popup() {
 // -------------  SERVICE POPUP  -------------------
 // -------------------------------------------------
 
-function cavani_tm_service_popup() {
+export function cavani_tm_service_popup() {
 
 	"use strict";
 
-	var modalBox = jQuery('.cavani_tm_modalbox');
-	var button = jQuery('.cavani_tm_service .service_list ul li .cavani_tm_full_link');
+	var modalBox = $('.cavani_tm_modalbox');
+	var button = $('.cavani_tm_service .service_list ul li .cavani_tm_full_link');
 	var closePopup = modalBox.find('.close');
 
 	button.on('click', function () {
-		var element = jQuery(this);
+		var element = $(this);
 		var parent = element.closest('.list_inner');
 		var elImage = parent.find('.popup_service_image').attr('src');
 		var title = parent.find('.title').html();
@@ -284,7 +274,7 @@ function cavani_tm_service_popup() {
 // ---------------   PRELOADER   -----------------------
 // -----------------------------------------------------
 
-function cavani_tm_preloader() {
+export function cavani_tm_preloader() {
 
 	"use strict";
 
@@ -308,7 +298,7 @@ function cavani_tm_preloader() {
 // -----------------   MY LOAD    ----------------------
 // -----------------------------------------------------
 
-function cavani_tm_my_load() {
+export function cavani_tm_my_load() {
 
 	"use strict";
 
@@ -320,11 +310,11 @@ function cavani_tm_my_load() {
 // ------------------   CURSOR    ----------------------
 // -----------------------------------------------------
 
-function cavani_tm_cursor() {
+export function cavani_tm_cursor() {
 
 	"use strict";
 
-	var myCursor = jQuery('.mouse-cursor');
+	var myCursor = $('.mouse-cursor');
 
 	if (myCursor.length) {
 		if ($("body")) {
@@ -347,30 +337,30 @@ function cavani_tm_cursor() {
 // ---------------    IMAGE TO SVG    ------------------
 // -----------------------------------------------------
 
-function cavani_tm_imgtosvg() {
+export function cavani_tm_imgtosvg() {
 
 	"use strict";
 
-	jQuery('img.svg').each(function () {
+	$('img.svg').each(function () {
 
-		var jQueryimg = jQuery(this);
-		var imgClass = jQueryimg.attr('class');
-		var imgURL = jQueryimg.attr('src');
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
 
-		jQuery.get(imgURL, function (data) {
+		$.get(imgURL, function (data) {
 			// Get the SVG tag, ignore the rest
-			var jQuerysvg = jQuery(data).find('svg');
+			var $svg = $(data).find('svg');
 
 			// Add replaced image's classes to the new SVG
 			if (typeof imgClass !== 'undefined') {
-				jQuerysvg = jQuerysvg.attr('class', imgClass + ' replaced-svg');
+				$svg = $svg.attr('class', imgClass + ' replaced-svg');
 			}
 
 			// Remove any invalid XML tags as per http://validator.w3.org
-			jQuerysvg = jQuerysvg.removeAttr('xmlns:a');
+			$svg = $svg.removeAttr('xmlns:a');
 
 			// Replace image with new SVG
-			jQueryimg.replaceWith(jQuerysvg);
+			$img.replaceWith($svg);
 
 		}, 'xml');
 
@@ -381,12 +371,12 @@ function cavani_tm_imgtosvg() {
 // --------------------   POPUP    ---------------------
 // -----------------------------------------------------
 
-function cavani_tm_popup() {
+export function cavani_tm_popup() {
 
 	"use strict";
 
-	jQuery('.gallery_zoom').each(function () { // the containers for all your galleries
-		jQuery(this).magnificPopup({
+	$('.gallery_zoom').each(function () { // the containers for all your galleries
+		$(this).magnificPopup({
 			delegate: 'a.zoom', // the selector for gallery item
 			type: 'image',
 			gallery: {
@@ -397,8 +387,8 @@ function cavani_tm_popup() {
 		});
 
 	});
-	jQuery('.popup-youtube, .popup-vimeo').each(function () { // the containers for all your galleries
-		jQuery(this).magnificPopup({
+	$('.popup-youtube, .popup-vimeo').each(function () { // the containers for all your galleries
+		$(this).magnificPopup({
 			disableOn: 700,
 			type: 'iframe',
 			mainClass: 'mfp-fade',
@@ -408,7 +398,7 @@ function cavani_tm_popup() {
 		});
 	});
 
-	jQuery('.soundcloude_link').magnificPopup({
+	$('.soundcloude_link').magnificPopup({
 		type: 'image',
 		gallery: {
 			enabled: true,
@@ -420,19 +410,19 @@ function cavani_tm_popup() {
 // -----------------    PORTFOLIO    ---------------
 // -------------------------------------------------
 
-function cavani_tm_portfolio() {
+export function cavani_tm_portfolio() {
 
 	"use strict";
 
-	if (jQuery().isotope) {
+	if ($().isotope) {
 
 		// Needed variables
-		var filter = jQuery('.cavani_tm_portfolio .portfolio_filter ul');
+		var filter = $('.cavani_tm_portfolio .portfolio_filter ul');
 
 		if (filter.length) {
 			// Isotope Filter 
 			filter.find('a').on('click', function () {
-				var element = jQuery(this);
+				var element = $(this);
 				var selector = element.attr('data-filter');
 				var list = element.closest('.cavani_tm_portfolio').find('.portfolio_list').children('ul');
 				list.isotope({
@@ -456,14 +446,14 @@ function cavani_tm_portfolio() {
 // ---------------   DATA IMAGES    --------------------
 // -----------------------------------------------------
 
-function cavani_tm_data_images() {
+export function cavani_tm_data_images() {
 
 	"use strict";
 
-	var data = jQuery('*[data-img-url]');
+	var data = $('*[data-img-url]');
 
 	data.each(function () {
-		var element = jQuery(this);
+		var element = $(this);
 		var url = element.data('img-url');
 		element.css({ backgroundImage: 'url(' + url + ')' });
 	});
@@ -473,40 +463,40 @@ function cavani_tm_data_images() {
 // ----------------    CONTACT FORM    -----------------
 // -----------------------------------------------------
 
-function cavani_tm_contact_form() {
+export function cavani_tm_contact_form() {
 
 	"use strict";
 
-	jQuery(".contact_form #send_message").on('click', function () {
+	$(".contact_form #send_message").on('click', function () {
 
-		var name = jQuery(".contact_form #name").val();
-		var email = jQuery(".contact_form #email").val();
-		var message = jQuery(".contact_form #message").val();
-		var subject = jQuery(".contact_form #subject").val();
-		var success = jQuery(".contact_form .returnmessage").data('success');
+		var name = $(".contact_form #name").val();
+		var email = $(".contact_form #email").val();
+		var message = $(".contact_form #message").val();
+		var subject = $(".contact_form #subject").val();
+		var success = $(".contact_form .returnmessage").data('success');
 
-		jQuery(".contact_form .returnmessage").empty(); //To empty previous error/success message.
+		$(".contact_form .returnmessage").empty(); //To empty previous error/success message.
 		//checking for blank fields	
 		if (name === '' || email === '' || message === '') {
 
-			jQuery('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
+			$('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
 		}
 		else {
 			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contact.php", { ajax_name: name, ajax_email: email, ajax_message: message, ajax_subject: subject }, function (data) {
+			$.post("modal/contact.php", { ajax_name: name, ajax_email: email, ajax_message: message, ajax_subject: subject }, function (data) {
 
-				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
+				$(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
 
 
-				if (jQuery(".contact_form .returnmessage span.contact_error").length) {
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);
+				if ($(".contact_form .returnmessage span.contact_error").length) {
+					$(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);
 				} else {
-					jQuery(".contact_form .returnmessage").append("<span class='contact_success'>" + success + "</span>");
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
+					$(".contact_form .returnmessage").append("<span class='contact_success'>" + success + "</span>");
+					$(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
 				}
 
 				if (data === "") {
-					jQuery("#contact_form")[0].reset();//To reset form fields on success
+					$("#contact_form")[0].reset();//To reset form fields on success
 				}
 
 			});
@@ -519,11 +509,11 @@ function cavani_tm_contact_form() {
 // --------------    OWL CAROUSEL    -------------------
 // -----------------------------------------------------
 
-function cavani_tm_mycarousel() {
+export function cavani_tm_mycarousel() {
 
 	"use strict";
 
-	var carousel = jQuery('.cavani_tm_about .testimonials .owl-carousel');
+	var carousel = $('.cavani_tm_about .testimonials .owl-carousel');
 
 	carousel.owlCarousel({
 		loop: true,
@@ -551,7 +541,7 @@ function cavani_tm_mycarousel() {
 // -------------------    HASHTAG    -------------------
 // -----------------------------------------------------
 
-function hashtag() {
+export function hashtag() {
 	"use strict";
 	var ccc = $('.cavani_tm_header .menu .ccc');
 	var element = $('.cavani_tm_header .menu .active a');
@@ -568,7 +558,7 @@ function hashtag() {
 
 }
 
-function currentLink(ccc, e) {
+export function currentLink(ccc, e) {
 	"use strict";
 	if (!e.length) { return false; }
 	var left = e.offset().left;
@@ -584,27 +574,31 @@ function currentLink(ccc, e) {
 // -------------  GLITCH  --------------------------
 // -------------------------------------------------
 
-$(".glitch").mgGlitch({
-	destroy: false,
-	glitch: true,
-	scale: true,
-	blend: true,
-	blendModeType: "hue",
-	glitch1TimeMin: 200,
-	glitch1TimeMax: 400,
-	glitch2TimeMin: 10,
-	glitch2TimeMax: 100
-});
+export function glitch() {
+	"use strict";
+
+	$(".glitch").mgGlitch({
+		destroy: false,
+		glitch: true,
+		scale: true,
+		blend: true,
+		blendModeType: "hue",
+		glitch1TimeMin: 200,
+		glitch1TimeMax: 400,
+		glitch2TimeMin: 10,
+		glitch2TimeMax: 100
+	});
+}
 
 // -------------------------------------------------
 // -------------  RIPPLE  --------------------------
 // -------------------------------------------------
 
-function cavani_tm_ripple() {
+export function cavani_tm_ripple() {
 
 	"use strict";
 
-	jQuery('#ripple').ripples({
+	$('#ripple').ripples({
 		resolution: 500,
 		dropRadius: 20,
 		perturbance: 0.04
@@ -615,7 +609,7 @@ function cavani_tm_ripple() {
 // -------------  MOVING BOX  ----------------------
 // -------------------------------------------------
 
-function cavani_tm_moving_box() {
+export function cavani_tm_moving_box() {
 
 	"use strict";
 

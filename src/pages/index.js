@@ -1,7 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image';
+import { useEffect } from 'react';
+import { loadAllScripts } from '../js/init'
 
 export default function Home() {
+
+  useEffect(() => {
+    loadAllScripts()
+  })
+
   return (
     <>
       <Head>
@@ -12,9 +19,9 @@ export default function Home() {
       </Head>
 
       <>
-        {/* <div id="preloader">
+        <div id="preloader">
           <div className="loader_line"></div>
-        </div> */}
+        </div>
 
         <div className="cavani_tm_all_wrap" data-magic-cursor="show" data-enter="fadeInUp" data-exit="">
 
