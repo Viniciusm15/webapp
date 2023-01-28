@@ -1,4 +1,4 @@
-import { UserOutlined } from '@ant-design/icons';
+import Image from 'next/image';
 
 export default function Header() {
     return (
@@ -13,8 +13,15 @@ export default function Header() {
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#about">Quem somos</a></li>
                     <li><a href="#contact">Contato</a></li>
-                    <li><a href="#userArea"><UserOutlined/></a></li>
+                    <li><a href="#userArea">
+                        <Image
+                            src="social/user-outlined.svg"
+                            height={35}
+                            width={35}
+                        />
+                    </a></li>
                 </ul>
+
                 <span className="ccc"></span>
             </div>
         </div>

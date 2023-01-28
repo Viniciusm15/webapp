@@ -24,7 +24,7 @@ export default function Footer() {
 
                     <li><a href="#"><Image
                         className="svg"
-                        src="social/twitter.svg"
+                        src="social/whatsapp-fill.svg"
                         height={15}
                         width={15}
                     /></a></li>

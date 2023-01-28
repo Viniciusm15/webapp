@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function MobileMenu() {
     return (
         <>
@@ -19,22 +21,47 @@ export default function MobileMenu() {
             <div className="cavani_tm_mobile_menu">
                 <div className="inner">
                     <div className="wrapper">
-                        <div className="avatar">
-                            <div className="image" data-img-url="../assets/empty.jpg"></div>
-                        </div>
                         <div className="menu_list">
                             <ul className="transition_link">
-                                <li className="active"><a href="#portfolio">Ensaios</a></li>
-                                <li><a href="#about">About</a></li>
+                                <li><a href="#userArea">
+                                    <Image
+                                        src="social/user-outlined.svg"
+                                        height={35}
+                                        width={35}
+                                    />
+                                </a></li>
+                                <li className="active"><a href="#home">Início</a></li>
+                                <li><a href="#portfolio">Portfólio</a></li>
+                                <li><a href="#about">Quem somos</a></li>
+                                <li><a href="#contact">Contato</a></li>
                             </ul>
                         </div>
+
                         <div className="social">
                             <ul>
-                                <li><a href="#"><img className="svg" src="../assets/social/facebook.svg" alt="" /></a></li>
-                                <li><a href="#"><img className="svg" src="../assets/social/instagram.svg" alt="" /></a></li>
-                                <li><a href="#"><img className="svg" src="../assets/social/twitter.svg" alt="" /></a></li>
+                                <li><a href="#"><Image
+                                    className="svg"
+                                    src="social/facebook.svg"
+                                    height={15}
+                                    width={15}
+                                /></a></li>
+
+                                <li><a href="#"><Image
+                                    className="svg"
+                                    src="social/instagram.svg"
+                                    height={15}
+                                    width={15}
+                                /></a></li>
+
+                                <li><a href="#"><Image
+                                    className="svg"
+                                    src="social/whatsapp-fill.svg"
+                                    height={15}
+                                    width={15}
+                                /></a></li>
                             </ul>
                         </div>
+
                         <div className="copyright">
                             <p>Copyright &copy; 2023</p>
                         </div>
