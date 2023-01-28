@@ -1,3 +1,5 @@
+import { UserOutlined } from '@ant-design/icons';
+
 export default function Header() {
     return (
         <div className="cavani_tm_header">
@@ -11,7 +13,7 @@ export default function Header() {
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#about">Quem somos</a></li>
                     <li><a href="#contact">Contato</a></li>
-                    <li><a href="#userArea">ICONE</a></li>
+                    <li><a href="#userArea"><UserOutlined/></a></li>
                 </ul>
                 <span className="ccc"></span>
             </div>

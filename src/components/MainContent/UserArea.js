@@ -4,6 +4,7 @@ export default function UserArea() {
             <div className="cavani_tm_title">
                 <span>Área do cliente</span>
             </div>
+
             <div className="form">
                 <div className="left">
                     <div className="fields">

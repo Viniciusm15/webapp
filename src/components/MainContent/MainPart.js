@@ -22,7 +22,7 @@ export default function MainPart() {
                                 </span>
                             </h3>
                             <div className="cavani_tm_button transition_link">
-                                <a href="#contact">Área do cliente</a>
+                                <a href="#userArea">Área do cliente</a>
                             </div>
                         </div>
                     </div>
