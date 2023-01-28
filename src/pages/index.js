@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import MainPart from '@/components/MainPart';
+import MainPart from '@/components/MainContent/MainPart';
 import { useEffect } from 'react';
 import { loadAllScripts } from '../js/init'
 
