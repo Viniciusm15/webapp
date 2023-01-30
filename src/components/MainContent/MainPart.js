@@ -21,6 +21,7 @@ export default function MainPart() {
                                     <span className="blc">Estúdio de <b className="is-visible">Fotografia</b></span>
                                 </span>
                             </h3>
+                            
                             <div className="cavani_tm_button transition_link">
                                 <a href="#userArea">Área do cliente</a>
                             </div>

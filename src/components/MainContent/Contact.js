@@ -1,14 +1,23 @@
-import { Formik } from 'formik'
+import { Formik, Field } from 'formik'
+import * as Yup from 'yup';
 
 export default function Contact() {
+
+    const contactSchema = Yup.object().shape({
+        name: Yup.string().required('Nome obrigatório *'),
+        email: Yup.string().email('Email inválido *').required('Email obrigatório *'),
+        message: Yup.string().required('Mensagem obrigatória *'),
+    });
+
     return (
-        <div className="cavani_tm_contact">
+        <div className="cavani_tm_form_responsive">
             <div className="cavani_tm_title">
                 <span>Entrar em contato</span>
             </div>
 
             <Formik
-                initialValues={{ name: '', email: '' }}
+                initialValues={{ name: '', email: '', message: '' }}
+                validationSchema={contactSchema}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
                         alert(JSON.stringify(values, null, 2));
@@ -28,39 +37,42 @@ export default function Contact() {
                         <div className="form">
                             <div className="left">
                                 <div className="fields">
-                                    <form onSubmit={handleSubmit} className="contact_form">
+                                    <form onSubmit={handleSubmit}>
                                         <div className="first">
                                             <ul>
                                                 <li>
-                                                    <input
+                                                    <Field
                                                         type="text"
                                                         name="name"
                                                         placeholder='Nome'
                                                         onChange={handleChange}
                                                         onBlur={handleBlur}
                                                         value={values.name} />
-                                                    {errors.name && touched.name && errors.name}
+                                                    {errors.name && touched.name && <div className="error">{errors.name}</div>}
                                                 </li>
 
                                                 <li>
-                                                    <input
+                                                    <Field
                                                         type="email"
                                                         name="email"
                                                         placeholder='Email'
                                                         onChange={handleChange}
                                                         onBlur={handleBlur}
                                                         value={values.email} />
-                                                    {errors.email && touched.email && errors.email}
+                                                    {errors.email && touched.email && <div className="error">{errors.email}</div>}
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="last">
-                                            <textarea id="message" placeholder="Mensagem"></textarea>
+                                            <textarea
+                                                name="message" placeholder="Mensagem"
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                                value={values.message} />
+                                            {errors.message && touched.message && <div className="error">{errors.message}</div>}
                                         </div>
 
-                                        <div className="cavani_tm_button">
-                                            <a id="send_message" href="#" type="submit" disabled={isSubmitting}>Enviar</a>
-                                        </div>
+                                        <button className="cavani_tm_button contact" type="submit" disabled={isSubmitting}>Enviar</button>
                                     </form>
                                 </div>
                             </div>

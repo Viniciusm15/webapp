@@ -398,6 +398,7 @@ h6 {
 .cavani_tm_header .menu ul li a:hover {
 	color: #fff;
 }
+
 /*#endregion */
 
 /*#region MOBILE MENU*/
@@ -558,6 +559,7 @@ h6 {
 	color: #333;
 	font-family: "Poppins";
 }
+
 /*#endregion */
 
 /*#region MAINPART*/
@@ -664,6 +666,7 @@ h6 {
 	width: 100px;
 	background-color: #f6fbff;
 }
+
 /*#endregion */
 
 /*#region HOME*/
@@ -710,13 +713,9 @@ h6 {
 }
 
 .cavani_tm_button {
-	width: 100%;
 	height: auto;
 	clear: both;
-	float: left;
-}
 
-.cavani_tm_button a {
 	text-decoration: none;
 	color: #fff;
 	display: inline-block;
@@ -725,7 +724,6 @@ h6 {
 	border: 2px solid #333;
 	font-family: "Poppins";
 	font-weight: 500;
-
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
 	-ms-transition: all .3s ease;
@@ -733,23 +731,30 @@ h6 {
 	transition: all .3s ease;
 }
 
+.cavani_tm_button a {
+	height: auto;
+	clear: both;
+
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	padding: 13px 38px;
+	font-family: "Poppins";
+	font-weight: 500;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.cavani_tm_button:hover,
 .cavani_tm_button a:hover {
+	cursor: pointer;
 	background-color: transparent;
 	color: #333;
 }
 
-.cd-headline.clip .cd-words-wrapper::after {
-	height: 70%;
-	top: 50%;
-	width: 2px;
-	transform: translateY(-50%);
-	background-color: #999;
-}
-
-.cd-headline.loading-bar .cd-words-wrapper::after {
-	background: #333;
-	height: 2px;
-}
 /*#endregion */
 
 /*#region ABOUT*/
@@ -863,6 +868,7 @@ h6 {
 .cavani_tm_about .biography .right ul li a:hover {
 	color: #333;
 }
+
 /*#endregion */
 
 /*#region PORTFOLIO*/
@@ -1275,10 +1281,11 @@ h6 {
 	background-size: cover;
 	background-position: center;
 }
+
 /*#endregion */
 
 /*#region CONTACT*/
-.cavani_tm_contact {
+.cavani_tm_form_responsive {
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1286,7 +1293,7 @@ h6 {
 	margin-bottom: 100px;
 }
 
-.cavani_tm_contact .form {
+.cavani_tm_form_responsive .form {
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1294,144 +1301,71 @@ h6 {
 	margin-top: 100px;
 }
 
-.cavani_tm_contact .form .left {
+.cavani_tm_form_responsive .form .left {
 	width: 50%;
 	padding-right: 15px;
 }
 
-.cavani_tm_contact .form .fields {
+.cavani_tm_form_responsive .form .fields {
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 }
 
-.cavani_tm_contact .form .fields .first {
+.cavani_tm_form_responsive .form .fields .error {
+	margin-top: 10px;
+	color: red;
+}
+
+.cavani_tm_form_responsive .form .fields .first {
 	width: 100%;
 	float: left;
 }
 
-.cavani_tm_contact .form .fields ul {
+.cavani_tm_form_responsive .form .fields ul {
 	margin: 0px;
 	list-style-type: none;
 }
 
-.cavani_tm_contact .form .fields ul li {
+.cavani_tm_form_responsive .form .fields ul li {
 	width: 100%;
 	margin: 0px 0px 30px 0px;
 	float: left;
 }
 
-.cavani_tm_contact .form .fields ul li input {
+.cavani_tm_form_responsive .form .fields ul li input {
 	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .07);
+	border: 1px solid rgba(0, 0, 0, .2);
 	background-color: transparent;
 }
 
-.cavani_tm_contact .form .fields ul li input:focus {
+.cavani_tm_form_responsive .form .fields ul li input:focus {
 	outline: none;
-	border: 1px solid rgba(0, 0, 0, .2);
+	border: 1px solid #7d7789;
 }
 
-.cavani_tm_contact .form .fields .last textarea {
+.cavani_tm_form_responsive .form .fields .last textarea {
 	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .07);
+	border: 1px solid rgba(0, 0, 0, .2);
 	height: 120px;
 	resize: none;
-	margin-bottom: 20px;
 	background-color: transparent;
 }
 
-.cavani_tm_contact .form .fields .last textarea:focus {
+.cavani_tm_form_responsive .form .fields .last textarea:focus {
 	outline: none;
-	border: 1px solid rgba(0, 0, 0, .2);
+	border: 1px solid #7d7789;
 }
 
-.cavani_tm_contact .form .right {
-	width: 50%;
-	padding-left: 15px;
-	position: relative;
-}
-/*#endregion */
-
-/*#region USER AREA*/
-.cavani_tm_user_area {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	margin-bottom: 100px;
-}
-
-.cavani_tm_user_area .form {
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: flex;
-	margin-top: 100px;
-}
-
-.cavani_tm_user_area .form .left {
-	width: 50%;
-	padding-right: 15px;
-}
-
-.cavani_tm_user_area .form .fields {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-
-.cavani_tm_user_area .form .fields .first {
-	width: 100%;
-	float: left;
-}
-
-.cavani_tm_user_area .form .fields ul {
-	margin: 0px;
-	list-style-type: none;
-}
-
-.cavani_tm_user_area .form .fields ul li {
-	width: 100%;
-	margin: 0px 0px 30px 0px;
-	float: left;
-}
-
-.cavani_tm_user_area .form .fields ul li input {
-	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .07);
-	background-color: transparent;
-}
-
-.cavani_tm_user_area .form .fields ul li input:focus {
-	outline: none;
-	border: 1px solid rgba(0, 0, 0, .2);
-}
-
-.cavani_tm_user_area .form .fields .last textarea {
-	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .07);
-	height: 120px;
-	resize: none;
-	margin-bottom: 20px;
-	background-color: transparent;
-}
-
-.cavani_tm_user_area .form .fields .last textarea:focus {
-	outline: none;
-	border: 1px solid rgba(0, 0, 0, .2);
-}
-
-.cavani_tm_user_area .form .right {
+.cavani_tm_form_responsive .form .right {
 	width: 50%;
 	padding-left: 15px;
 	position: relative;
 }
 
-.cavani_tm_user_area form .cavani_tm_button {
-	margin-top: 433px;
+.cavani_tm_form_responsive form .cavani_tm_button.contact {
+	margin-top: 35px;
 }
 /*#endregion */
 
@@ -1494,6 +1428,7 @@ h6 {
 	background-color: #fff;
 	z-index: 10;
 }
+
 /*#endregion */
 
 /*#region CURSOR*/
@@ -1553,6 +1488,7 @@ h6 {
 	position: absolute;
 	z-index: -1111;
 }
+
 /*#endregion*/
 
 /*#region GLITCH EFFECT*/
@@ -1577,6 +1513,7 @@ h6 {
 	opacity: 1;
 	transform: scale(1);
 }
+
 /*#endregion */
 
 /*#region PARTICLE EFFECT*/
@@ -1593,6 +1530,7 @@ h6 {
 	position: relative;
 	z-index: 2;
 }
+
 /*#endregion */
 
 /*#region RIPPLE EFFECT*/
@@ -1605,6 +1543,7 @@ h6 {
 	background-position: center;
 	background-image: url("https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp");
 }
+
 /*#endregion */
 
 /*#region MEDIA QUERIES (FOR SMALL DEVICES)*/
@@ -1818,18 +1757,18 @@ h6 {
 		width: 50%;
 	}
 
-	.cavani_tm_contact .form {
+	.cavani_tm_form_responsive .form {
 		flex-direction: column;
 		align-items: baseline;
 	}
 
-	.cavani_tm_contact .form .left {
+	.cavani_tm_form_responsive .form .left {
 		width: 100%;
 		padding: 0px;
 		margin-bottom: 30px;
 	}
 
-	.cavani_tm_contact .form .right {
+	.cavani_tm_form_responsive .form .right {
 		width: 100%;
 		padding: 0px;
 	}
@@ -1976,4 +1915,5 @@ h6 {
 		padding: 20px 0px;
 	}
 }
+
 /*#endregion */

@@ -1,14 +1,22 @@
-import { Formik } from 'formik'
+import { Formik, Field } from 'formik'
+import * as Yup from 'yup';
 
 export default function UserArea() {
+
+    const signupSchema = Yup.object().shape({
+        email: Yup.string().email('Email inválido *').required('Email obrigatório *'),
+        password: Yup.string().required('Senha obrigatória *')
+    });
+
     return (
-        <div className="cavani_tm_user_area">
+        <div className="cavani_tm_form_responsive">
             <div className="cavani_tm_title">
                 <span>Área do cliente</span>
             </div>
 
             <Formik
                 initialValues={{ email: '', password: '' }}
+                validationSchema={signupSchema}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
                         alert(JSON.stringify(values, null, 2));
@@ -22,41 +30,42 @@ export default function UserArea() {
                     handleChange,
                     handleBlur,
                     handleSubmit,
-                    isSubmitting,
+                    isSubmitting
                 }) => {
                     return (
                         <div className="form">
                             <div className="fields">
-                                <form onSubmit={handleSubmit} className="contact_form" id="contact_form">
+                                <form onSubmit={handleSubmit}>
                                     <div className="first">
                                         <ul>
                                             <li>
-                                                <input
+                                                <Field
+                                                    showRequiredAsterisk
                                                     type="email"
                                                     name="email"
                                                     placeholder='Email'
                                                     onChange={handleChange}
                                                     onBlur={handleBlur}
-                                                    value={values.email} />
-                                                {errors.email && touched.email && errors.email}
+                                                    value={values.email}
+                                                />
+                                                {errors.email && touched.email && <div className="error">{errors.email}</div>}
                                             </li>
 
                                             <li>
-                                                <input
+                                                <Field
                                                     type="password"
                                                     name="password"
                                                     placeholder='Senha'
                                                     onChange={handleChange}
                                                     onBlur={handleBlur}
-                                                    value={values.password} />
-                                                {errors.password && touched.password && errors.password}
+                                                    value={values.password}
+                                                />
+                                                {errors.password && touched.password && <div className="error">{errors.password}</div>}
                                             </li>
                                         </ul>
                                     </div>
 
-                                    <div className="cavani_tm_button">
-                                        <a id="send_message" href="#" type="submit" disabled={isSubmitting}>Entrar</a>
-                                    </div>
+                                    <button className="cavani_tm_button" type="submit" disabled={isSubmitting}>Entrar</button>
                                 </form>
                             </div>
                         </div>
