@@ -13,6 +13,7 @@ export default function Footer() {
                         src="social/facebook.svg"
                         height={15}
                         width={15}
+                        alt=""
                     /></a></li>
 
                     <li><a href="#"><Image
@@ -20,6 +21,7 @@ export default function Footer() {
                         src="social/instagram.svg"
                         height={15}
                         width={15}
+                        alt=""
                     /></a></li>
 
                     <li><a href="#"><Image
@@ -27,6 +29,7 @@ export default function Footer() {
                         src="social/whatsapp-fill.svg"
                         height={15}
                         width={15}
+                        alt=""
                     /></a></li>
                 </ul>
             </div>

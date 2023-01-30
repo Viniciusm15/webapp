@@ -68,13 +68,10 @@ export default function Contact() {
                             {/* Map: https://www.embedgooglemap.net */}
                             <div className="right">
                                 <div className="map_wrap">
-                                    <div class="mapouter">
-                                        <div class="gmap_canvas">
+                                    <div className="mapouter">
+                                        <div className="gmap_canvas">
                                             <iframe width="600" height="500" id="gmap_canvas"
-                                                src="https://maps.google.com/maps?q=Blumenau,%20SC,%20Brasil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                                frameborder="0"
-                                                marginheight="0"
-                                                marginwidth="0" />
+                                                src="https://maps.google.com/maps?q=Blumenau,%20SC,%20Brasil&t=&z=13&ie=UTF8&iwloc=&output=embed" />
                                         </div>
                                     </div>
                                 </div>

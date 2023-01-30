@@ -28,6 +28,7 @@ export default function MobileMenu() {
                                         src="social/user-outlined.svg"
                                         height={35}
                                         width={35}
+                                        alt=""
                                     />
                                 </a></li>
                                 <li className="active"><a href="#home">Início</a></li>
@@ -44,6 +45,7 @@ export default function MobileMenu() {
                                     src="social/facebook.svg"
                                     height={15}
                                     width={15}
+                                    alt=""
                                 /></a></li>
 
                                 <li><a href="#"><Image
@@ -51,6 +53,7 @@ export default function MobileMenu() {
                                     src="social/instagram.svg"
                                     height={15}
                                     width={15}
+                                    alt=""
                                 /></a></li>
 
                                 <li><a href="#"><Image
@@ -58,6 +61,7 @@ export default function MobileMenu() {
                                     src="social/whatsapp-fill.svg"
                                     height={15}
                                     width={15}
+                                    alt=""
                                 /></a></li>
                             </ul>
                         </div>

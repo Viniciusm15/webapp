@@ -18,6 +18,7 @@ export default function Header() {
                             src="social/user-outlined.svg"
                             height={35}
                             width={35}
+                            alt=""
                         />
                     </a></li>
                 </ul>

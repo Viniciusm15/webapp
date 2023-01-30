@@ -23,7 +23,7 @@ export default function Portfolio() {
                         <li className="image">
                             <div className="list_inner">
                                 <div className="image">
-                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp" />
+                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp" alt="" />
                                     <div className="details">
                                         <h3>Título</h3>
                                         <span>Descrição</span>
@@ -35,7 +35,7 @@ export default function Portfolio() {
                         <li className="image">
                             <div className="list_inner">
                                 <div className="image">
-                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg" />
+                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg" alt=""/>
                                     <div className="details">
                                         <h3>Título</h3>
                                         <span>Descrição</span>
@@ -47,7 +47,7 @@ export default function Portfolio() {
                         <li className="image">
                             <div className="list_inner">
                                 <div className="image">
-                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp" />
+                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp" alt=""/>
                                     <div className="details">
                                         <h3>Título</h3>
                                         <span>Descrição</span>
@@ -59,7 +59,7 @@ export default function Portfolio() {
                         <li className="image">
                             <div className="list_inner">
                                 <div className="image">
-                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp" />
+                                    <Image src="https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp" alt=""/>
                                     <div className="details">
                                         <h3>Título</h3>
                                         <span>Descrição</span>
