@@ -1,4 +1,4 @@
-import { Image } from 'antd';
+import { Image } from 'antd'
 
 export default function Portfolio() {
     return (
@@ -6,6 +6,7 @@ export default function Portfolio() {
             <div className="cavani_tm_title">
                 <span>Portfolio Criativo</span>
             </div>
+
             <div className="portfolio_filter">
                 <ul>
                     {/* Buscar infos da api e seus filtros */}
@@ -15,6 +16,7 @@ export default function Portfolio() {
                     <li><a href="#" data-filter=".soundcloud">Temático</a></li>
                 </ul>
             </div>
+            
             <div className="portfolio_list">
                 <ul className="gallery_zoom">
                     <Image.PreviewGroup>

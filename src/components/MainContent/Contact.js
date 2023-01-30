@@ -1,4 +1,4 @@
-import { Formik } from 'formik';
+import { Formik } from 'formik'
 
 export default function Contact() {
     return (
@@ -28,14 +28,14 @@ export default function Contact() {
                         <div className="form">
                             <div className="left">
                                 <div className="fields">
-                                    <form onSubmit={handleSubmit} className="contact_form" id="contact_form">
+                                    <form onSubmit={handleSubmit} className="contact_form">
                                         <div className="first">
                                             <ul>
                                                 <li>
                                                     <input
                                                         type="text"
                                                         name="name"
-                                                        placeholder='nome'
+                                                        placeholder='Nome'
                                                         onChange={handleChange}
                                                         onBlur={handleBlur}
                                                         value={values.name} />
@@ -46,7 +46,7 @@ export default function Contact() {
                                                     <input
                                                         type="email"
                                                         name="email"
-                                                        placeholder='email'
+                                                        placeholder='Email'
                                                         onChange={handleChange}
                                                         onBlur={handleBlur}
                                                         value={values.email} />

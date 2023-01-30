@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import MainPart from '@/components/MainContent/MainPart';
-import { useEffect } from 'react';
+import MainPart from '@/components/MainContent/MainPart'
+import { useEffect } from 'react'
 import { loadAllScripts } from '../js/init'
 
 export default function Home() {

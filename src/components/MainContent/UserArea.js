@@ -1,4 +1,4 @@
-import { Formik } from 'formik';
+import { Formik } from 'formik'
 
 export default function UserArea() {
     return (
@@ -34,7 +34,7 @@ export default function UserArea() {
                                                 <input
                                                     type="email"
                                                     name="email"
-                                                    placeholder='email'
+                                                    placeholder='Email'
                                                     onChange={handleChange}
                                                     onBlur={handleBlur}
                                                     value={values.email} />
@@ -45,7 +45,7 @@ export default function UserArea() {
                                                 <input
                                                     type="password"
                                                     name="password"
-                                                    placeholder='senha'
+                                                    placeholder='Senha'
                                                     onChange={handleChange}
                                                     onBlur={handleBlur}
                                                     value={values.password} />
