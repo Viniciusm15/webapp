@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import FacebookIcon from 'public/social/facebook.svg'
+import InstagramIcon from 'public/social/instagram.svg'
+import WhatsAppIcon from 'public/social/whatsapp-fill.svg'
 
 export default function Footer() {
     return (
@@ -9,29 +12,9 @@ export default function Footer() {
 
             <div className="social">
                 <ul>
-                    <li><a href="#"><Image
-                        className="svg"
-                        src="/social/facebook.svg"
-                        height={15}
-                        width={15}
-                        alt=""
-                    /></a></li>
-
-                    <li><a href="#"><Image
-                        className="svg"
-                        src="/social/instagram.svg"
-                        height={15}
-                        width={15}
-                        alt=""
-                    /></a></li>
-
-                    <li><a href="#"><Image
-                        className="svg"
-                        src="/social/whatsapp-fill.svg"
-                        height={15}
-                        width={15}
-                        alt=""
-                    /></a></li>
+                    <li><a href="#"><Image className="svg" src={FacebookIcon} alt="" /></a></li>
+                    <li><a href="#"><Image className="svg" src={InstagramIcon} alt="" /></a></li>
+                    <li><a href="#"><Image className="svg" src={WhatsAppIcon} alt="" /></a></li>
                 </ul>
             </div>
         </div>

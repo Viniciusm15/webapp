@@ -1155,10 +1155,12 @@ h6 {
 	background-size: cover;
 	background-position: center;
 }
+
 /*#endregion */
 
 /*#region PORTFOLIO/ESAIOS */
-.cavani_tm_portfolio, .cavani_tm_essay {
+.cavani_tm_portfolio,
+.cavani_tm_essay {
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1166,7 +1168,8 @@ h6 {
 	margin-bottom: 70px;
 }
 
-.cavani_tm_portfolio .portfolio_filter, .cavani_tm_essay .essay_filter{
+.cavani_tm_portfolio .portfolio_filter,
+.cavani_tm_essay .essay_filter {
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1176,27 +1179,31 @@ h6 {
 	padding: 55px 0px 42px 0px;
 }
 
-.cavani_tm_portfolio .portfolio_filter ul, .cavani_tm_essay .essay_filter ul {
+.cavani_tm_portfolio .portfolio_filter ul,
+.cavani_tm_essay .essay_filter ul {
 	margin: 0px;
 	list-style-type: none;
 }
 
-.cavani_tm_essay .essay_filter ul.essay_edit{
+.cavani_tm_essay .essay_filter ul.essay_edit {
 	display: flex;
 	justify-content: space-between;
 	padding-right: 20px;
 }
 
-.cavani_tm_portfolio .portfolio_filter ul li , .cavani_tm_essay .essay_filter ul li {
+.cavani_tm_portfolio .portfolio_filter ul li,
+.cavani_tm_essay .essay_filter ul li {
 	margin: 0px 40px 0px 0px;
 	display: inline-block;
 }
 
-.cavani_tm_portfolio .portfolio_filter ul li:last-child, .cavani_tm_essay .essay_filter ul li:last-child {
+.cavani_tm_portfolio .portfolio_filter ul li:last-child,
+.cavani_tm_essay .essay_filter ul li:last-child {
 	margin-right: 0px;
 }
 
-.cavani_tm_portfolio .portfolio_filter ul li a, .cavani_tm_essay .essay_filter ul li a  {
+.cavani_tm_portfolio .portfolio_filter ul li a,
+.cavani_tm_essay .essay_filter ul li a {
 	text-decoration: none;
 	color: #333;
 	font-family: "Poppins";
@@ -1209,14 +1216,16 @@ h6 {
 	transition: all .3s ease;
 }
 
-.cavani_tm_portfolio .portfolio_list, .cavani_tm_essay .essay_list{
+.cavani_tm_portfolio .portfolio_list,
+.cavani_tm_essay .essay_list {
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 }
 
-.cavani_tm_portfolio .portfolio_list ul, .cavani_tm_essay .essay_list ul {
+.cavani_tm_portfolio .portfolio_list ul,
+.cavani_tm_essay .essay_list ul {
 	margin: 0px 0px 0px -50px;
 	list-style-type: none;
 }
@@ -1227,13 +1236,15 @@ h6 {
 	float: left;
 	padding-left: 50px;
 }
+
 .cavani_tm_essay .essay_list ul li {
 	float: left;
 	padding-left: 50px;
 	padding-top: 30px;
 }
 
-.cavani_tm_portfolio .portfolio_list ul li .list_inner, .cavani_tm_essay .essay_list ul li .list_inner  {
+.cavani_tm_portfolio .portfolio_list ul li .list_inner,
+.cavani_tm_essay .essay_list ul li .list_inner {
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1242,11 +1253,13 @@ h6 {
 	overflow: hidden;
 }
 
-.cavani_tm_portfolio .portfolio_list ul li .image, .cavani_tm_essay .essay_list ul li .image {
+.cavani_tm_portfolio .portfolio_list ul li .image,
+.cavani_tm_essay .essay_list ul li .image {
 	position: relative;
 }
 
-.cavani_tm_portfolio .portfolio_list ul li .image img, .cavani_tm_essay .essay_list ul li .image img {
+.cavani_tm_portfolio .portfolio_list ul li .image img,
+.cavani_tm_essay .essay_list ul li .image img {
 	position: relative;
 	min-width: 100%;
 	object-fit: cover;
@@ -1254,7 +1267,8 @@ h6 {
 	height: 25rem;
 }
 
-.cavani_tm_portfolio .portfolio_list ul li .details, .cavani_tm_essay .essay_list ul li .details {
+.cavani_tm_portfolio .portfolio_list ul li .details,
+.cavani_tm_essay .essay_list ul li .details {
 	position: absolute;
 	left: 20px;
 	right: 20px;
@@ -1272,28 +1286,45 @@ h6 {
 	transition: all .3s ease;
 }
 
-.cavani_tm_portfolio .portfolio_list ul li .list_inner:hover .details, .cavani_tm_essay .essay_list ul li .list_inner:hover .details {
+.cavani_tm_essay .essay_list .icon-dowload {
+	position: absolute;
+	right: 0px;
+	z-index: 3;
+}
+
+.cavani_tm_essay .essay_list .icon-dowload, .cavani_tm_essay .essay_list .icon-dowload .img{
+	margin: 6px 15px 0px 0px;
+	height: 35px;
+	width: 35px;
+}
+
+.cavani_tm_portfolio .portfolio_list ul li .list_inner:hover .details,
+.cavani_tm_essay .essay_list ul li .list_inner:hover .details {
 	transform: translateY(0);
 	bottom: 20px;
 }
 
-.cavani_tm_portfolio .portfolio_list ul li .details h3, .cavani_tm_essay .essay_list ul li .details h3 {
+.cavani_tm_portfolio .portfolio_list ul li .details h3,
+.cavani_tm_essay .essay_list ul li .details h3 {
 	font-size: 16px;
 	margin-bottom: 2px;
 	font-weight: 600;
 }
 
-.cavani_tm_portfolio .portfolio_list ul li .details span, .cavani_tm_essay .essay_list ul li .details span {
+.cavani_tm_portfolio .portfolio_list ul li .details span,
+.cavani_tm_essay .essay_list ul li .details span {
 	font-size: 14px;
 }
 
-.cavani_tm_portfolio .hidden_content, .cavani_tm_essay .hidden_content {
+.cavani_tm_portfolio .hidden_content,
+.cavani_tm_essay .hidden_content {
 	display: none;
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
 	z-index: -11;
 }
+
 /*#endregion */
 
 /*#region CONTACT*/

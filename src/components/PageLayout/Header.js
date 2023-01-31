@@ -15,7 +15,7 @@ export default function Header() {
                     <li><a href="#contact">Contato</a></li>
                     <li><a href="#userArea">
                         <Image
-                            src="social/user-outlined.svg"
+                            src="/social/user-outlined.svg"
                             height={35}
                             width={35}
                             alt=""
