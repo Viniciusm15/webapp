@@ -6,11 +6,12 @@ export default function Footer() {
             <div className="copyright">
                 <p>Copyright &copy; 2023</p>
             </div>
+
             <div className="social">
                 <ul>
                     <li><a href="#"><Image
                         className="svg"
-                        src="social/facebook.svg"
+                        src="/social/facebook.svg"
                         height={15}
                         width={15}
                         alt=""
@@ -18,7 +19,7 @@ export default function Footer() {
 
                     <li><a href="#"><Image
                         className="svg"
-                        src="social/instagram.svg"
+                        src="/social/instagram.svg"
                         height={15}
                         width={15}
                         alt=""
@@ -26,7 +27,7 @@ export default function Footer() {
 
                     <li><a href="#"><Image
                         className="svg"
-                        src="social/whatsapp-fill.svg"
+                        src="/social/whatsapp-fill.svg"
                         height={15}
                         width={15}
                         alt=""

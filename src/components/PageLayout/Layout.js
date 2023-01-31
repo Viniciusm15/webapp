@@ -8,8 +8,8 @@ export default function Layout({ children }) {
             <div className="cavani_tm_left_border"></div>
             <div className="cavani_tm_right_border"></div>
 
-            <MobileMenu />
             <Header />
+            <MobileMenu />
             {children}
             <Footer />
 

@@ -40,7 +40,6 @@ export default function UserArea() {
                                         <ul>
                                             <li>
                                                 <Field
-                                                    showRequiredAsterisk
                                                     type="email"
                                                     name="email"
                                                     placeholder='Email'

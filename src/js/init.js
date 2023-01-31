@@ -4,7 +4,7 @@ import $ from 'jquery'
 // ---------------   FUNCTIONS    ----------------------
 // -----------------------------------------------------
 
-export function loadAllScripts() {
+export function handleScripts() {
 	"use strict";
 
 	cavani_tm_modalbox();
@@ -13,7 +13,6 @@ export function loadAllScripts() {
 	cavani_tm_portfolio_popup();
 	cavani_tm_cursor();
 	cavani_tm_imgtosvg();
-	cavani_tm_portfolio();
 	cavani_tm_data_images();
 	hashtag();
 	cavani_tm_moving_box();
@@ -231,42 +230,6 @@ export function cavani_tm_imgtosvg() {
 		}, 'xml');
 
 	});
-}
-
-// -------------------------------------------------
-// -----------------    PORTFOLIO    ---------------
-// -------------------------------------------------
-
-export function cavani_tm_portfolio() {
-
-	"use strict";
-
-	if ($().isotope) {
-
-		// Needed variables
-		var filter = $('.cavani_tm_portfolio .portfolio_filter ul');
-
-		if (filter.length) {
-			// Isotope Filter 
-			filter.find('a').on('click', function () {
-				var element = $(this);
-				var selector = element.attr('data-filter');
-				var list = element.closest('.cavani_tm_portfolio').find('.portfolio_list').children('ul');
-				list.isotope({
-					filter: selector,
-					animationOptions: {
-						duration: 750,
-						easing: 'linear',
-						queue: false
-					}
-				});
-
-				filter.find('a').removeClass('current');
-				element.addClass('current');
-				return false;
-			});
-		}
-	}
 }
 
 // -----------------------------------------------------
