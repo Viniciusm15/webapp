@@ -10,7 +10,7 @@ export default function Header() {
             <div className="menu">
                 <ul className="transition_link">
                     <li className="active"><a href="#home">Início</a></li>
-                    <li><a href="#edit">Portfólio</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#about">Quem somos</a></li>
                     <li><a href="#contact">Contato</a></li>
                     <li><a href="#userArea">
