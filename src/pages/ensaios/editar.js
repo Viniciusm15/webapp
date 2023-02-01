@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Image, Checkbox } from 'antd'
 
 export default function Editar() {
 
+    const [imageSrcList, setImageSrcList] = useState([]);
+
+    function handleRemove(imageSrc) {
+        const newList = (Object.values(imageSrcList).filter((src) => src !== imageSrc));
+        setImageSrcList(newList);
+    }
+
     const onChange = (checkedImage) => {
-        console.log('value = ', checkedImage.target.value);
+        if (imageSrcList.includes(checkedImage.target.value))
+            return handleRemove(checkedImage.target.value);
+
+        setImageSrcList([...imageSrcList, checkedImage.target.value]);
     };
 
     return (
