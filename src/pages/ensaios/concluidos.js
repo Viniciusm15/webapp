@@ -23,7 +23,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
@@ -35,7 +35,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
@@ -47,7 +47,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
@@ -59,7 +59,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
@@ -71,7 +71,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
@@ -83,7 +83,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
@@ -95,7 +95,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
@@ -107,7 +107,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="icon-dowload" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
