@@ -1,6 +1,7 @@
 import { Image as _image } from 'antd'
 import Image from 'next/image'
 import DowloadIcon from 'public/dowload-icon.svg'
+import { saveAs } from 'file-saver'
 
 export default function Concluidos() {
     return (
@@ -23,7 +24,7 @@ export default function Concluidos() {
                                 <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
-                                            <a className="top-side-right" href="#"><Image className="img" src={DowloadIcon} alt="" /></a>
+                                            <a className="top-side-right" onClick={() => saveAs("https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp")}><Image className="img" src={DowloadIcon} alt="" /></a>
 
                                             <_image
                                                 preview={false}
