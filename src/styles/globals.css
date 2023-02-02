@@ -1267,6 +1267,10 @@ h6 {
 	height: 395px;
 }
 
+.cavani_tm_essay .essay_list ul li .image a img {
+	cursor: pointer;
+}
+
 .cavani_tm_portfolio .portfolio_list ul li .details,
 .cavani_tm_essay .essay_list ul li .details {
 	position: absolute;
