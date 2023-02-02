@@ -1,5 +1,4 @@
 import Header from './Header'
-import MobileMenu from './MobileMenu'
 import Footer from './Footer'
 
 export default function Layout({ children }) {
@@ -9,7 +8,6 @@ export default function Layout({ children }) {
             <div className="cavani_tm_right_border"></div>
 
             <Header />
-            <MobileMenu />
             {children}
             <Footer />
 
