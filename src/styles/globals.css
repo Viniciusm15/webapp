@@ -1209,6 +1209,10 @@ h6 {
 	float: left;
 }
 
+.cavani_tm_form_responsive .form .fields span{
+	margin: 0px 10px 0px 10px;
+}
+
 .cavani_tm_form_responsive .form .fields .error {
 	margin-top: 10px;
 	color: red;
