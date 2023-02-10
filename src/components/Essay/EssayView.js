@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Image as _image } from 'antd'
 import Router from 'next/router'
 
-import { queryEssay } from '@/pages/api/requests/client'
+import { essayList } from '@/pages/api/requests/client'
 
 export default function EssayView() {
 
@@ -10,7 +10,7 @@ export default function EssayView() {
 
     useEffect(() => {
         const handleFunction = async () => {
-            queryEssay('created').then((response) => {
+            essayList('created').then((response) => {
                 setEssay(response)
             })
         }
