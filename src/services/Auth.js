@@ -1,9 +1,11 @@
-import { login } from '../pages/api/requests/login'
+import { login } from '@/pages/api/requests/client'
 
-const AUTH_TOKEN_KEY = 'Auth_token_key'
+const AUTH_TOKEN_KEY = 'Auth_Token_key'
 
 export const getToken = () => {
-  return window.localStorage.getItem(AUTH_TOKEN_KEY)
+  if (typeof window !== 'undefined') {
+    return window.localStorage.getItem(AUTH_TOKEN_KEY)
+  }
 }
 
 export const setToken = (token) => {

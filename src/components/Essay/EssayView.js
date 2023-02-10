@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { Image as _image } from 'antd'
 import Router from 'next/router'
-import { queryEssay } from '../../pages/api/requests/essay'
+import { queryEssay } from '@/pages/api/requests/client'
 
 export default function EssayView() {
 
     const [essay, setEssay] = useState([]);
 
     useEffect(() => {
-        const handlerFunction = async () => {
+        const handleFunction = async () => {
             queryEssay().then((response) => {
                 setEssay(response)
             })
         }
 
-        handlerFunction()
+        handleFunction()
     }, [])
 
     function sendProps(essay) {
