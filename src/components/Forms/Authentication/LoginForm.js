@@ -1,7 +1,8 @@
 import React from 'react'
 import { Formik, Field } from 'formik'
 import * as Yup from 'yup';
-import { login } from '../../../pages/api/requests/login'
+
+import { login } from '@/pages/api/requests/client'
 
 export default function LoginForm({ handleState }) {
 

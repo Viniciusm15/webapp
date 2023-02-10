@@ -1,5 +1,6 @@
 import { Image as _image } from 'antd'
 import Image from 'next/image'
+
 import DowloadIcon from 'public/dowload-icon.svg'
 import { saveAs } from 'file-saver'
 

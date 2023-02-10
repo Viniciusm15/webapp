@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
+
 import { getToken } from '@/services/Auth'
 
 export default function Header() {
