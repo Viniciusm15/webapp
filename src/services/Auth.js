@@ -9,11 +9,15 @@ export const getToken = () => {
 }
 
 export const setToken = (token) => {
-  return window.localStorage.setItem(AUTH_TOKEN_KEY, token)
+  if (typeof window !== 'undefined') {
+    return window.localStorage.setItem(AUTH_TOKEN_KEY, token)
+  }
 }
 
 export const removeToken = () => {
-  return window.localStorage.removeItem(AUTH_TOKEN_KEY)
+  if (typeof window !== 'undefined') {
+    return window.localStorage.removeItem(AUTH_TOKEN_KEY)
+  }
 }
 
 export const bootstrap = async () => {
