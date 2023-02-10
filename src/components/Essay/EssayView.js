@@ -38,8 +38,8 @@ export default function EssayView() {
                     <div className="essay_filter">
                         <ul>
                             <li><a href="/ensaios">Todos</a></li>
-                            <li><a href="/ensaios/editar">Pendentes de edição</a></li>
-                            <li><a href="/ensaios/concluidos">Concluídos</a></li>
+                            <li><a href="/ensaios/edit">Pendentes de edição</a></li>
+                            <li><a href="/ensaios/completed">Concluídos</a></li>
                         </ul>
                     </div>
 
