@@ -9,7 +9,7 @@ export default function EssayView() {
 
     useEffect(() => {
         const handleFunction = async () => {
-            queryEssay().then((response) => {
+            queryEssay('created').then((response) => {
                 setEssay(response)
             })
         }

@@ -1,4 +1,5 @@
 import { login } from '@/pages/api/requests/client'
+import jwt from 'jwt-decode'
 
 const AUTH_TOKEN_KEY = 'Auth_Token_key'
 

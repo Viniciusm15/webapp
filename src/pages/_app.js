@@ -13,7 +13,7 @@ import '@/styles/plugins.css'
 
 export default function App({ Component, pageProps }) {
 
-  useEffect(() => { handleScripts() })
+  useEffect(() => { handleScripts() }, [])
 
   return (
     <Providers >

@@ -23,6 +23,8 @@ export default function Details() {
   }
 
   return (
-    <>{renderSwitch(props.essay)}</>
+    <React.Fragment>
+      {renderSwitch(props.essay)}
+    </React.Fragment>
   )
 }

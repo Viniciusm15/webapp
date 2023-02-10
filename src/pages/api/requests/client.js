@@ -1,7 +1,7 @@
 import { axiosClient } from '../apiClient';
 
-export function queryEssay(){
-    return axiosClient.get('/client/essay/list');
+export function queryEssay(status) {
+    return axiosClient.get('/client/essay/list', { params: { status } });
 }
 
 export function login(email, password) {
