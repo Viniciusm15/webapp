@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik, Field } from 'formik'
 import * as Yup from 'yup';
+import { login } from '../../../pages/api/requests/login'
 
 export default function LoginForm({ handleState }) {
 
@@ -14,6 +15,11 @@ export default function LoginForm({ handleState }) {
             initialValues={{ email: '', password: '' }}
             validationSchema={signupSchema}
             onSubmit={(values, { setSubmitting }) => {
+
+                login(values.email, values.password).then((response) => {
+                    console.log(response)
+                })
+
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
                     setSubmitting(false);
