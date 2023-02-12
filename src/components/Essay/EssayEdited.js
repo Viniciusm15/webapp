@@ -11,7 +11,7 @@ export default function EssayEdited({ essay }) {
 
     useEffect(() => {
         essayDetails(essay.id).then((response) => { setEssays(response.data.items) })
-    }, [essay.id, essays.lenght])
+    }, [essay.id])
 
     return (
         <div className="essay_filter">

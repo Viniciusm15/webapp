@@ -18,7 +18,7 @@ export default function LoginForm({ handleState }) {
             onSubmit={(values) => {
                 login(values.email, values.password).then((response) => {
                     setToken(response.data.token)
-                    window.location.href = '/essays';
+                    window.location.href = '/essays'
                 })
             }}>
             {({

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Image, Checkbox } from 'antd'
+import { Image, Checkbox, message } from 'antd'
 
 import { essayDetails, selectedEssays } from '@/pages/api/requests/client'
 
@@ -25,8 +25,7 @@ export default function EssayCreated({ essay }) {
 
     const handleSubmit = () => {
         selectedEssays(essay.id, imageSrcList).then((response) => {
-            //validar erro ou ok
-            console.log(essay.id, imageSrcList)
+            window.location.href = '/essays';
         })
     }
 

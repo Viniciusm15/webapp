@@ -8,7 +8,7 @@ import PreLoader from '@/components/PreLoader'
 export default function Home() {
   const router = useRouter()
 
-  useEffect(() => { handleAuthenticationToRedirectUrl(router, '/ensaios') }, []);
+  useEffect(() => { handleAuthenticationToRedirectUrl(router, '/essays') }, []);
 
   return (
     <React.Fragment>
