@@ -1,10 +1,20 @@
 import { Image as _image } from 'antd'
 import Image from 'next/image'
-
-import DowloadIcon from 'public/dowload-icon.svg'
 import { saveAs } from 'file-saver'
 
-export default function EssayCompleted() {
+import DowloadIcon from 'public/dowload-icon.svg'
+import { essayDetails } from '@/pages/api/requests/client'
+
+export default function EssayCompleted({ essayId }) {
+
+    const [essays, setEssays] = useState([]);
+
+    useEffect(() => {
+        essayDetails(essayId).then((response) => { setEssays(response.data.essays) })
+    }, [])
+
+    console.log(essays)
+
     return (
         <div className="cavani_tm_section animated">
             <div className="section_inner">
@@ -22,22 +32,23 @@ export default function EssayCompleted() {
                     <div className="essay_list">
                         <ul className="gallery_zoom">
                             <_image.PreviewGroup>
-                                <li className="image">
-                                    <div className="list_inner">
-                                        <div className="image">
-                                            <a className="top-side-right"
-                                                onClick={() => saveAs("https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp")}>
-                                                <Image className="img" src={DowloadIcon} alt="" />
-                                            </a>
+                                {essays && essays.map((item, index) => (
+                                    <li className="image">
+                                        <div className="list_inner">
+                                            <div className="image">
+                                                <a className="top-side-right"
+                                                    onClick={() => saveAs("https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp")}>
+                                                    <Image className="img" src={DowloadIcon} alt="" />
+                                                </a>
 
-                                            <_image
-                                                preview={false}
-                                                src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp" alt="" />
+                                                <_image
+                                                    preview={false}
+                                                    src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp" alt="" />
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-
-                                <li className="image">
+                                    </li>
+                                ))}
+                                {/* <li className="image">
                                     <div className="list_inner">
                                         <div className="image">
                                             <a className="top-side-right"
@@ -50,7 +61,7 @@ export default function EssayCompleted() {
                                                 src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg" alt="" />
                                         </div>
                                     </div>
-                                </li>
+                                </li> */}
                             </_image.PreviewGroup>
                         </ul>
                     </div>

@@ -3,9 +3,9 @@ import { Formik, Field } from 'formik'
 import * as Yup from 'yup';
 
 import { login } from '@/pages/api/requests/client'
+import { setToken } from '@/services/Auth'
 
 export default function LoginForm({ handleState }) {
-
     const signupSchema = Yup.object().shape({
         email: Yup.string().email('Email inválido *').required('Email obrigatório *'),
         password: Yup.string().required('Senha obrigatória *')
@@ -15,16 +15,11 @@ export default function LoginForm({ handleState }) {
         <Formik
             initialValues={{ email: '', password: '' }}
             validationSchema={signupSchema}
-            onSubmit={(values, { setSubmitting }) => {
-
+            onSubmit={(values) => {
                 login(values.email, values.password).then((response) => {
-                    console.log(response)
+                    setToken(response.data.token)
+                    window.location.href = '/ensaios';
                 })
-
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400);
             }}>
             {({
                 values,
@@ -67,7 +62,7 @@ export default function LoginForm({ handleState }) {
                                     </ul>
                                 </div>
 
-                                <button className="cavani_tm_button" type="submit" disabled={isSubmitting}>Entrar </button>
+                                <button className="cavani_tm_button" type="submit">Entrar </button>
                                 <span>Ou</span><a href="#" onClick={handleState}>Cadastre-se agora!</a>
                             </form>
                         </div>

@@ -1,4 +1,4 @@
-import Portfolio from './Portfolio'
+import Portfolio from './Portfolio/Portfolio'
 import About from './About'
 import Contact from './Contact'
 import UserArea from './UserArea'
@@ -21,7 +21,7 @@ export default function MainPart() {
                                     <span className="blc">Estúdio de <b className="is-visible">Fotografia</b></span>
                                 </span>
                             </h3>
-                            
+
                             <div className="cavani_tm_button transition_link">
                                 <a href="#userArea">Área do cliente</a>
                             </div>

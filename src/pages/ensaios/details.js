@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
-import { handleAuthentionToRedirectUrl } from '@/helpers/functions'
+import PreLoader from '@/components/PreLoader'
 import EssayEdit from '@/components/Essay/EssayEdit'
 import EssayCompleted from '@/components/Essay/EssayCompleted'
-import PreLoader from '@/components/PreLoader'
+import { handleAuthentionToRedirectUrl } from '@/helpers/functions'
 
 export default function Details() {
   const router = useRouter()
@@ -12,24 +12,24 @@ export default function Details() {
   useEffect(() => { handleAuthentionToRedirectUrl(router, '/ensaios/details') }, []);
 
   const {
-    query: { essay }
+    query: { essayId, essayStatus }
   } = router
 
-  const props = { essay }
+  const props = { essayId, essayStatus }
 
-  function renderSwitch(essay) {
-    switch (essay) {
-      case 'edit':
-        return <EssayEdit />
-      case 'download':
-        return <EssayCompleted />
+  function renderSwitch(essayId, essayStatus) {
+    switch (essayStatus) {
+      case 'edited':
+        return <EssayEdit essayId={essayId} />
+      case 'created':
+        return <EssayCompleted essayId={essayId} />
     }
   }
 
   return (
     <React.Fragment>
       <PreLoader />
-      {renderSwitch(props.essay)}
+      {renderSwitch(props.essayId, props.essayStatus)}
     </React.Fragment>
   )
 }

@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 import { Image, Checkbox } from 'antd'
 
-export default function EssayEdit() {
+import { essayDetails } from '@/pages/api/requests/client'
 
+export default function EssayEdit({ essayId }) {
+
+    const [essays, setEssays] = useState([]);
     const [imageSrcList, setImageSrcList] = useState([]);
+
+    useEffect(() => {
+        essayDetails(essayId).then((response) => { setEssays(response.data.essays) })
+    }, [])
+
+    console.log(essays)
 
     function handleRemove(imageSrc) {
         const newList = (Object.values(imageSrcList).filter((src) => src !== imageSrc));
@@ -36,19 +45,20 @@ export default function EssayEdit() {
                         <ul className="gallery_zoom">
                             <Checkbox.Group>
                                 <Image.PreviewGroup>
-                                    <li className="image">
-                                        <div className="list_inner">
-                                            <div className="image">
-                                                <Checkbox className="top-side-right" value="1" onChange={onChange} />
-                                                <Image
-                                                    preview={false}
-                                                    src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
-                                                    alt="" />
+                                    {essays && essays.map((item, index) => (
+                                        <li className="image">
+                                            <div className="list_inner">
+                                                <div className="image">
+                                                    <Checkbox className="top-side-right" value="1" onChange={onChange} />
+                                                    <Image
+                                                        preview={false}
+                                                        src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
+                                                        alt="" />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-
-                                    <li className="image">
+                                        </li>
+                                    ))}
+                                    {/* <li className="image">
                                         <div className="list_inner">
                                             <div className="image">
                                                 <Checkbox className="top-side-right" value="2" onChange={onChange} />
@@ -58,7 +68,7 @@ export default function EssayEdit() {
                                                     alt="" />
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> */}
                                 </Image.PreviewGroup>
                             </Checkbox.Group>
                         </ul>

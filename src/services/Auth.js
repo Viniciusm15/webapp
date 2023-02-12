@@ -1,10 +1,21 @@
+import jwt from 'jwt-decode'
 import { login } from '@/pages/api/requests/client'
 
 const AUTH_TOKEN_KEY = 'Auth_Token_key'
 
 export const getToken = () => {
   if (typeof window !== 'undefined') {
-    return window.localStorage.getItem(AUTH_TOKEN_KEY)
+    const token = window.localStorage.getItem(AUTH_TOKEN_KEY)
+
+    if (token) {
+      const tokenExpiration = jwt(token).exp
+
+      if (Date.now() >= tokenExpiration * 1000) {
+        removeToken()
+      }
+    }
+
+    return token
   }
 }
 

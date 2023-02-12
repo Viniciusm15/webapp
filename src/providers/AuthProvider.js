@@ -21,7 +21,7 @@ const useAuthProvider = () => {
   const context = useContext(AuthProviderContext)
 
   if (context === undefined) {
-    throw new Error('useAuthBackOffice must be used within a [AuthBackOfficeContext]')
+    throw new Error('useAuthContext must be used within a [AuthProviderContext]')
   }
 
   return context

@@ -1055,6 +1055,26 @@ h6 {
 	transition: all .3s ease;
 }
 
+.ant-tabs-nav-list {
+	text-decoration: none;
+	color: #333;
+	font-family: "Poppins";
+	font-weight: 500;
+}
+
+.ant-tabs .ant-tabs-tab:hover{
+	color: #000;
+}
+
+.ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+	border-bottom: 2px solid #333;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+	color: #333;
+	text-shadow: 0 0 0.25px currentcolor;
+}
+
 .cavani_tm_portfolio .portfolio_list,
 .cavani_tm_essay .essay_list {
 	width: 100%;
@@ -1148,7 +1168,7 @@ h6 {
 }
 
 :where(.css-dev-only-do-not-override-1n7nwfa).ant-checkbox-group {
-    display: block;
+	display: block;
 }
 
 .cavani_tm_portfolio .portfolio_list ul li .list_inner:hover .details,
@@ -1209,7 +1229,7 @@ h6 {
 	float: left;
 }
 
-.cavani_tm_form_responsive .form .fields span{
+.cavani_tm_form_responsive .form .fields span {
 	margin: 0px 10px 0px 10px;
 }
 

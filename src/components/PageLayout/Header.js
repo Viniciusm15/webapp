@@ -14,7 +14,7 @@ export default function Header() {
     return (
         <div className="cavani_tm_header">
             <div className="logo">
-                <a className="text" href="#"><span>Logo</span></a>
+                <a className="text" href="/"><span>Logo</span></a>
             </div>
 
             <div className="menu">
