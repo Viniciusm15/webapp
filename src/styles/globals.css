@@ -342,6 +342,12 @@ h6 {
 	top: 2px;
 }
 
+.cavani_tm_header .logo a img {
+	max-width: 244px;
+	max-height: 124px;
+	margin-top: 55px;
+}
+
 .cavani_tm_header .menu {
 	position: relative;
 }
@@ -408,7 +414,7 @@ h6 {
 /*#region MAINPART*/
 .cavani_tm_mainpart {
 	position: absolute;
-	top: 70px;
+	top: 140px;
 	bottom: 70px;
 	left: 70px;
 	right: 70px;
@@ -491,13 +497,17 @@ h6 {
 	width: 0px;
 }
 
-.cavani_tm_section .section_inner {
+.cavani_tm_section .section_inner{
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 	position: relative;
-	padding: 92px 50px 0px 70px;
+	padding: 80px 50px 0px 70px;
+}
+
+.cavani_tm_section .section_inner.essay {
+	padding: 150px 50px 0px 86px;
 }
 
 .cavani_tm_section .section_inner:before {
@@ -1510,12 +1520,6 @@ h6 {
 		margin-left: 25px;
 	}
 
-	.cavani_tm_header {
-		height: 60px;
-		line-height: 60px;
-		padding: 0px 60px;
-	}
-
 	.cavani_tm_footer {
 		height: 60px;
 		line-height: 60px;
@@ -1531,7 +1535,7 @@ h6 {
 	}
 
 	.cavani_tm_mainpart {
-		top: 60px;
+		top: 140px;
 		left: 60px;
 		right: 60px;
 		bottom: 60px;
@@ -1571,10 +1575,6 @@ h6 {
 
 	.cavani_tm_section .section_inner {
 		padding: 95px 50px 0px 50px;
-	}
-
-	.cavani_tm_portfolio .portfolio_filter ul li {
-		margin-right: 30px;
 	}
 
 	.cavani_tm_modalbox .box_inner {
@@ -1638,6 +1638,10 @@ h6 {
 
 	.cavani_tm_home .job {
 		font-size: 22px;
+	}
+
+	.cavani_tm_header .logo img {
+		padding-right: 50px;
 	}
 
 	.cavani_tm_about .biography .wrapper {
@@ -1707,6 +1711,22 @@ h6 {
 	}
 }
 
+@media (max-width: 884px) {
+	.cavani_tm_header .menu {
+		min-width: 520px;
+	}
+
+	.cavani_tm_header .logo img {
+		min-width: 242px;
+	}
+}
+
+@media (max-width: 805px) {
+	.cavani_tm_header .menu {
+		display: none;
+	}
+}
+
 @media (max-width: 768px) {
 	.cavani_tm_home .name {
 		font-size: 40px;
@@ -1719,11 +1739,6 @@ h6 {
 	.cavani_tm_home .line {
 		height: 3px;
 		width: 40px;
-	}
-
-	.cavani_tm_header .menu {
-		min-width: 520px;
-		margin-left: 30px;
 	}
 
 	.cavani_tm_button a {
@@ -1765,12 +1780,6 @@ h6 {
 	.cavani_tm_modalbox .close a {
 		width: 28px;
 		height: 28px;
-	}
-}
-
-@media (max-width: 665px) {
-	.cavani_tm_header .menu {
-		display: none;
 	}
 }
 

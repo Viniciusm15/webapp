@@ -13,25 +13,10 @@ export default function Portfolio() {
         {
             key: '1',
             label: `Todos`,
-            children: <PortfolioList category="all" setEssayId={setEssayId} onKeyChange={onKeyChange} />
+            children: <PortfolioList setEssayId={setEssayId} onKeyChange={onKeyChange} />
         },
         {
             key: '2',
-            label: `Ar livre`,
-            children: <PortfolioList category="openAir" setEssayId={setEssayId} onKeyChange={onKeyChange} />
-        },
-        {
-            key: '3',
-            label: `Em estúdio`,
-            children: <PortfolioList category="inStudio" setEssayId={setEssayId} onKeyChange={onKeyChange} />
-        },
-        {
-            key: '4',
-            label: `Temático`,
-            children: <PortfolioList category="thematic" setEssayId={setEssayId} onKeyChange={onKeyChange} />
-        },
-        {
-            key: '5',
             label: `Detalhes`,
             disabled: true,
             children: <PortfolioDetails essayId={essayId} />

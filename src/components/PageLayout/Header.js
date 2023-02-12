@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { Image as _image } from 'antd'
 import Image from 'next/image'
 
 import { getToken, handleLogout } from '@/services/Auth'
@@ -15,7 +16,13 @@ export default function Header() {
     return (
         <div className="cavani_tm_header">
             <div className="logo">
-                <a className="text" href="/"><span>Logo</span></a>
+                <a href='/'>
+                    <_image
+                        alt="logo_img"
+                        preview={false}
+                        src="/logo.jpg"
+                    />
+                </a>
             </div>
 
             <div className="menu">

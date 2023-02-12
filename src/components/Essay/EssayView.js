@@ -8,7 +8,7 @@ export default function EssayView({ status, setEssay, onKeyChange }) {
 
     useEffect(() => {
         essayList(status).then((response) => { setEssays(response.data.essays) })
-    }, [status, essays.length])
+    }, [status])
 
     return (
         <div className="essay_list">

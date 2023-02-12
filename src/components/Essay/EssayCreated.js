@@ -26,6 +26,7 @@ export default function EssayCreated({ essay }) {
     const handleSubmit = () => {
         selectedEssays(essay.id, imageSrcList).then((response) => {
             //validar erro ou ok
+            console.log(essay.id, imageSrcList)
         })
     }
 
@@ -42,7 +43,7 @@ export default function EssayCreated({ essay }) {
                         <Checkbox.Group>
                             <Image.PreviewGroup>
                                 {essays && essays.map((item, index) => (
-                                    <li className="image" index={index}>
+                                    !item.isSelected && <li className="image" key={index}>
                                         <div className="list_inner">
                                             <div className="image">
                                                 <Checkbox className="top-side-right" value={item.id} onChange={onChange} />

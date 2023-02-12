@@ -12,6 +12,6 @@ export function essayDetails(essayId) {
     return axiosClient.get(`/client/essay/${essayId}/details`)
 }
 
-export function selectedEssays(essayId, ItensId) {
-    return axiosClient.post(`/client/essay/${essayId}/selected-items`, ItensId)
+export function selectedEssays(essayId, imagens) {
+    return axiosClient.post(`/client/essay/${essayId}/selected-items`, imagens)
 }

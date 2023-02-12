@@ -44,7 +44,7 @@ export default function Essays() {
     <React.Fragment>
       <PreLoader />
       <div className="cavani_tm_section animated">
-        <div className="section_inner">
+        <div className="section_inner essay">
           <div className="cavani_tm_title">
             <span>Ensaios</span>
           </div>
