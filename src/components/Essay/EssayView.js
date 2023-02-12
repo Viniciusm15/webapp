@@ -1,25 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Image as _image } from 'antd'
-import Router from 'next/router'
 
 import { essayList } from '@/pages/api/requests/client'
 
-export default function EssayView({ status }) {
+export default function EssayView({ status, setEssay, onKeyChange }) {
     const [essays, setEssays] = useState([]);
 
     useEffect(() => {
         essayList(status).then((response) => { setEssays(response.data.essays) })
-    }, [])
-
-    function sendProps(essayId, essayStatus) {
-        Router.push({
-            pathname: '/ensaios/details',
-            query: {
-                essayId,
-                essayStatus
-            }
-        })
-    }
+    }, [status, essays.length])
 
     return (
         <div className="essay_list">
@@ -29,7 +18,7 @@ export default function EssayView({ status }) {
                         <li className="image" key={index}>
                             <div className="list_inner">
                                 <div className="image">
-                                    <a onClick={() => sendProps(item.id, item.status)}>
+                                    <a onClick={() => { setEssay(item); onKeyChange('4'); }}>
                                         <_image preview={false} src={`data:image/png;base64, ${item.frontCoverUrl}`} alt="client_essays" />
                                     </a>
 

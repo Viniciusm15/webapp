@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Image from 'next/image'
 
-import { getToken } from '@/services/Auth'
+import { getToken, handleLogout } from '@/services/Auth'
 
 export default function Header() {
-
+    const router = useRouter()
     const [token, setToken] = useState(false);
 
     useEffect(() => {
@@ -18,8 +19,9 @@ export default function Header() {
             </div>
 
             <div className="menu">
-                <ul className="transition_link">
-                    {!token ? <><li className="active"><a href="#home">Início</a></li>
+                {router.pathname === "/" ?
+                    <ul className="transition_link">
+                        <li className="active"><a href="#home">Início</a></li>
                         <li><a href="#portfolio">Portfólio</a></li>
                         <li><a href="#about">Quem somos</a></li>
                         <li><a href="#contact">Contato</a></li>
@@ -30,19 +32,17 @@ export default function Header() {
                                 width={35}
                                 alt=""
                             />
-                        </a></li></>
-                        :
-                        <li className="active"><a>
-                            <Image
-                                src="/social/user-outlined.svg"
-                                height={35}
-                                width={35}
-                                alt=""
-                            />
-                        </a></li>}
-                </ul>
-
-                <span className="ccc"></span>
+                        </a></li>
+                        <span className="ccc"></span>
+                    </ul>
+                    :
+                    token && <a onClick={handleLogout}><Image
+                        src="/social/user-outlined.svg"
+                        height={35}
+                        width={35}
+                        alt=""
+                    /> </a>
+                }
             </div>
         </div>
     )

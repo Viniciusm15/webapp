@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-import { handleAuthentionToRedirectUrl } from '@/helpers/functions'
+import { handleAuthenticationToRedirectUrl } from '@/helpers/functions'
 import MainPart from '@/components/HomeContent/MainPart'
 import PreLoader from '@/components/PreLoader'
 
 export default function Home() {
   const router = useRouter()
 
-  useEffect(() => { handleAuthentionToRedirectUrl(router, '/ensaios') }, []);
+  useEffect(() => { handleAuthenticationToRedirectUrl(router, '/ensaios') }, []);
 
   return (
     <React.Fragment>

@@ -3,7 +3,6 @@ import LoginForm from '../Forms/Authentication/LoginForm'
 import RegisterForm from '../Forms/Authentication/RegisterForm'
 
 export default function UserArea() {
-
     const [show, setShow] = useState(true);
 
     const handleState = () => {

@@ -3,12 +3,12 @@ import { Image } from 'antd'
 
 import { essayList } from '@/pages/api/requests/public'
 
-export default function PortfolioList({ category }) {
+export default function PortfolioList({ category, setEssayId, onKeyChange }) {
     const [essays, setEssays] = useState([]);
 
     useEffect(() => {
-        essayList().then((response) => { setEssays(response.data.essays) }) //passar a categoria para filtrar
-    }, [])
+        essayList().then((response) => { setEssays(response.data.essays) }) //filtrar por campo "category"
+    }, []) //mapear propriedade para comportamento de atualização
 
     return (
         <div className="portfolio_list">
@@ -19,7 +19,13 @@ export default function PortfolioList({ category }) {
                             <div className="list_inner">
                                 <div className="image">
                                     <React.Fragment>
-                                        <Image preview={false} src={`data:image/png;base64, ${item.frontCoverUrl}`} alt="public_essays" />
+                                        <Image
+                                            alt="public_essays"
+                                            preview={false}
+                                            src={`data:image/png;base64, ${item.frontCoverUrl}`}
+                                            onClick={() => { onKeyChange('5'); setEssayId(item.id); }}
+                                        />
+
                                         <div className="details">
                                             <h3>{item.name}</h3>
                                             <span>{item.description}</span>

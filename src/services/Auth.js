@@ -4,31 +4,25 @@ import { login } from '@/pages/api/requests/client'
 const AUTH_TOKEN_KEY = 'Auth_Token_key'
 
 export const getToken = () => {
-  if (typeof window !== 'undefined') {
-    const token = window.localStorage.getItem(AUTH_TOKEN_KEY)
+  const token = window.localStorage.getItem(AUTH_TOKEN_KEY)
 
-    if (token) {
-      const tokenExpiration = jwt(token).exp
+  if (token) {
+    const tokenExpiration = jwt(token).exp
 
-      if (Date.now() >= tokenExpiration * 1000) {
-        removeToken()
-      }
+    if (Date.now() >= tokenExpiration * 1000) {
+      removeToken()
     }
-
-    return token
   }
+
+  return token
 }
 
 export const setToken = (token) => {
-  if (typeof window !== 'undefined') {
-    return window.localStorage.setItem(AUTH_TOKEN_KEY, token)
-  }
+  return window.localStorage.setItem(AUTH_TOKEN_KEY, token)
 }
 
 export const removeToken = () => {
-  if (typeof window !== 'undefined') {
-    return window.localStorage.removeItem(AUTH_TOKEN_KEY)
-  }
+  return window.localStorage.removeItem(AUTH_TOKEN_KEY)
 }
 
 export const bootstrap = async () => {
@@ -53,6 +47,7 @@ export const handleLogin = async ({ email, password }) => {
 
 export const handleLogout = () => {
   removeToken()
+  window.location.href = '/';
 
   return Promise.resolve(null)
 }

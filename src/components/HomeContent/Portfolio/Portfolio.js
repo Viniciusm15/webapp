@@ -1,28 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Tabs } from 'antd'
+
 import PortfolioList from './PortfolioList';
+import PortfolioDetails from './PorfolioDetails';
 
 export default function Portfolio() {
+    const [essayId, setEssayId] = useState('')
+    const [activeKey, setActiveKey] = useState('1')
+    const onKeyChange = (key) => setActiveKey(key)
+
     const items = [
         {
             key: '1',
             label: `Todos`,
-            children: <PortfolioList category="all" />,
+            children: <PortfolioList category="all" setEssayId={setEssayId} onKeyChange={onKeyChange} />
         },
         {
             key: '2',
             label: `Ar livre`,
-            children: <PortfolioList category="openAir" />,
+            children: <PortfolioList category="openAir" setEssayId={setEssayId} onKeyChange={onKeyChange} />
         },
         {
             key: '3',
             label: `Em estúdio`,
-            children: <PortfolioList category="inStudio" />,
+            children: <PortfolioList category="inStudio" setEssayId={setEssayId} onKeyChange={onKeyChange} />
         },
         {
             key: '4',
             label: `Temático`,
-            children: <PortfolioList category="thematic" />
+            children: <PortfolioList category="thematic" setEssayId={setEssayId} onKeyChange={onKeyChange} />
+        },
+        {
+            key: '5',
+            label: `Detalhes`,
+            disabled: true,
+            children: <PortfolioDetails essayId={essayId} />
         },
     ];
 
@@ -34,7 +46,7 @@ export default function Portfolio() {
 
             <div className="portfolio_filter">
                 <ul>
-                    <Tabs defaultActiveKey="1" items={items} />
+                    <Tabs defaultActiveKey="1" activeKey={activeKey} items={items} onChange={onKeyChange} />
                 </ul>
             </div>
         </div>

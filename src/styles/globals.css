@@ -371,6 +371,10 @@ h6 {
 	transition: all .3s ease;
 }
 
+.cavani_tm_header .menu a {
+	cursor: pointer;
+}
+
 .cavani_tm_header .menu .ccc {
 	position: absolute;
 	width: 30px;
@@ -1032,7 +1036,6 @@ h6 {
 
 .cavani_tm_portfolio .portfolio_filter ul li,
 .cavani_tm_essay .essay_filter ul li {
-	margin: 0px 40px 0px 0px;
 	display: inline-block;
 }
 
@@ -1055,6 +1058,12 @@ h6 {
 	transition: all .3s ease;
 }
 
+.cavani_tm_button.essay_edit {
+	display: flex;
+	margin-right: 18px;
+	margin-left: auto;
+}
+
 .ant-tabs-nav-list {
 	text-decoration: none;
 	color: #333;
@@ -1062,7 +1071,7 @@ h6 {
 	font-weight: 500;
 }
 
-.ant-tabs .ant-tabs-tab:hover{
+.ant-tabs .ant-tabs-tab:hover {
 	color: #000;
 }
 
